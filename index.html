@@ -22,6 +22,39 @@
             width:150px;
         }
 
+        .buttons{
+            margin:0;
+            margin-bottom: 20px;
+            padding:0;
+            display:flex center;
+            justify-content:flex-end;
+            align-items:flex-end;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width:100%
+        }
+
+        .buttons .btn{
+            padding: 0 10px;
+            display: inline-flex;
+            background: #ddd;
+            color: #fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .buttons .btn .active{
+         background: #444;   
+        }
+
+        .buttons .btn:nth-child(2){
+            font-size: 1.5em;
+        
+        }
+        .buttons .btn:nth-child(3){
+            font-size: 2em;
+        }
+
         .mainContainer{
             background-color: aliceblue;
             height: 90vh;
@@ -91,7 +124,7 @@
 
         .coffeeshop{
             width: 50%;
-            border-radius: 70px 20px;
+            border-radius: 90px 20px;
 
         }
 
@@ -104,7 +137,7 @@
 
         .lunch{
             width: 50%;
-            border-radius: 50px 20px;
+            border-radius: 90px 20px;
 
         }
 
@@ -140,6 +173,12 @@
     <img  class="banner" src="./pexels-jeswin-thomas-15161974.jpg" alt="austin south congress street autin capitol view">
     <h1 class="bannerTitle">Explore Austin in <br /> <em style="color:#B54B73">Pink</em></h1>
 
+    <div class="buttons">
+        <span class="btn active" onclick="document.getElementById(' ')">A</span>
+        <span class="btn">A</span>
+        <span class="btn">A</span>
+
+    </div>
     <p>2-Day Weekend in Austin</p>
     <hr>
     <p class="day1itinerary">Day 1</p>
@@ -177,10 +216,22 @@
         </text>
         <img class="lunch" href="https://www.yelp.com/biz/gabrielas-downtown-austin" src="./gabrielasdowntown.jpeg" alt="gabriela's downtown austin mexican restaurant">
     </div>
+    <br />
+    <hr>
+    Did you like it? <br /> Austin thematic tours 👉
 
-    
+    <button>Sign Up!</button>
 </div>
 </center>
 
 </body>
+<script>
+    function signup(){
+        let name = prompt ("What is your name?");
+            let email = prompt ("What is your email?");
+            alert ("Thank you! " + name + " Check your email for more thematic tours in Austin!");    
+        }
+        let signupClick= document.querySelector ("button");
+        signupClick.addEventListener ("click", signup);
+</script>
 </html>
