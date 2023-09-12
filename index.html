@@ -22,16 +22,33 @@
             width:150px;
         }
 
+        ul{
+            list-style: none;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            color:#B54B73;
+            font-size: 18px;
+            background-color: aliceblue;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        ul:hover{
+            cursor:pointer;
+        }
+
+        /*Accessibility Font-size*/
+
         .buttons{
-            margin:0;
+            width:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
             margin-bottom: 20px;
-            padding:0;
-            display:flex center;
-            justify-content:flex-end;
-            align-items:flex-end;
+            margin:0;
             box-sizing: border-box;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            width:100%
         }
 
         .buttons .btn{
@@ -55,6 +72,19 @@
             font-size: 2em;
         }
 
+        .container{
+            font-size: 1em;
+            color: #444;
+
+        }
+
+        .container p,
+        .container text{
+            transition:0.5s;
+
+        }
+/*end*/
+        
         .mainContainer{
             background-color: aliceblue;
             height: 90vh;
@@ -71,11 +101,11 @@
 
         .bannerTitle{
             font-family: 'Sacramento', cursive;
-            font-size:60px;
+            font-size:65px;
             position:relative;   
-            top: -50%;
+            top: -45%;
             bottom: -50px;  
-            color:#7283A7;   
+            color:aliceblue;   
         }
 
         p{
@@ -93,24 +123,10 @@
 
 
         }
-        ul{
-            list-style: none;
-            display:flex;
-            justify-content: space-around;
-            align-items: center;
-            color:#B54B73;
-            font-size: 1.18em;
-            background-color: aliceblue;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-
-        ul:hover{
-            cursor:pointer;
-        }
+      
 
         text{
-            font-size: 1.18em;
+            font-size:1em;
             font-weight: 200;
             margin-right: 5%;
             text-align: center;
@@ -159,7 +175,7 @@
         <li>
             Hotels
         </li>
-        <img class="logo" src="./barbie-png-logo-5313.png" alt="barbielogobackground">
+        <img class="logo" src="src/barbie-png-logo-5313.png" alt="barbielogobackground">
 
         <li>
             Cocktail Bars
@@ -170,15 +186,15 @@
     </ul>
     </nav>
 
-    <img  class="banner" src="./pexels-jeswin-thomas-15161974.jpg" alt="austin south congress street autin capitol view">
-    <h1 class="bannerTitle">Explore Austin in <br /> <em style="color:#B54B73">Pink</em></h1>
+    <img  class="banner" src="src/pexels-jeswin-thomas-15161974.jpg" alt="austin south congress street autin capitol view">
+    <h1 class="bannerTitle">Explore Austin in <br /> <em style="color:lightpink">Pink</em></h1>
 
     <div class="buttons">
-        <span class="btn active" onclick="document.getElementById('text').style.fontSize= '1.20 em' ">A</span>
-        <span class="btn" onclick="document.getElementById('text').style.fontSize= '1.25 em' ">A</span>
+        <span class="btn active" onclick="document.getElementById('text').style.fontSize= '1em' ">A</span>
+        <span class="btn" onclick="document.getElementById('text').style.fontSize= '1.25em' ">A</span>
         <span class="btn" onclick="document.getElementById('text').style.fontSize= '1.75em' ">A</span>
-
     </div>
+
 
     <div class="content" id="text">
     <p>2-Day Weekend in Austin</p>
@@ -186,7 +202,7 @@
     <p class="day1itinerary">Day 1</p>
 
     <div class="day1">
-        <img class="hotel"  href="https://eastaustinhotel.com/accommodations/waller-wing/" src="./Pinkhotel.jpeg" alt="archer east austin hotel pink room" >
+        <img class="hotel"  href="https://eastaustinhotel.com/accommodations/waller-wing/" src="src/Pinkhotel.jpeg" alt="archer east austin hotel pink room" >
         <text >
             Check-in to your hotel and get ready to explore the city in  <em style="color:#E99698">Pink</em>!   
         </text>
@@ -197,7 +213,7 @@
              Relax and refill with caffeinaited boba and a sweet cake at <em style="color: #E99698">"Sweet Memes"</em>! 
              Then stroll through South Congress street.   
         </text>
-        <img class="coffeeshop" href="https://www.instagram.com/sweetmemes.atx/?hl=es" class="dessert" src="./sweetmemesdessert.jpeg" alt="Boba and Dessert pink coffee shop">
+        <img class="coffeeshop" href="https://www.instagram.com/sweetmemes.atx/?hl=es" class="dessert" src="src/sweetmemesdessert.jpeg" alt="Boba and Dessert pink coffee shop">
     </div>
 
 <hr>
@@ -205,7 +221,7 @@
     <p class="day1itinerary">Day 2</p>
 
     <div class="day1">
-        <img class="breakfast"  href="https://tqm-atx.myshopify.com" src="./taqueromucho.webp" alt="taquero mucho pink mexican restaurant" >
+        <img class="breakfast"  href="https://tqm-atx.myshopify.com" src="src/taqueromucho.webp" alt="taquero mucho pink mexican restaurant" >
         <text >
             Explore the phonenomenal breaskfast tacos served in a <em style="color:#E99698">pink</em> tortilla at "Taquero Mucho"!
         </text>
@@ -216,13 +232,14 @@
             Fill up your bellies at <em style="color:#E99698">"Gabriela's Downtown"</em> with some delicious pink-cheladas 
             amazing and mexican food!
         </text>
-        <img class="lunch" href="https://www.yelp.com/biz/gabrielas-downtown-austin" src="./gabrielasdowntown.jpeg" alt="gabriela's downtown austin mexican restaurant">
+        <img class="lunch" href="https://www.yelp.com/biz/gabrielas-downtown-austin" src="src/gabrielasdowntown.jpeg" alt="gabriela's downtown austin mexican restaurant">
     </div>
     <br />
     <hr>
     Did you like it? <br /> Austin thematic tours 👉
 
     <button>Sign Up!</button>
+
 </div>
 </div>
 </center>
