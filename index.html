@@ -162,9 +162,24 @@
             justify-content: space-between;
             align-items: center;
         }
+
+        /*Contrast*/
+        .dark{
+            background:#B59898;
+            color:brown;
+        }
+
+        .dark .mainContainer{
+            background:white;
+        }
+
+        .dark p{
+            color:white;
+        }
+
     </style>
 </head>
-<body>
+<body class="dark">
 <center>
     <div class="mainContainer">
     <nav>
@@ -188,6 +203,8 @@
 
     <img  class="banner" src="src/pexels-jeswin-thomas-15161974.jpg" alt="austin south congress street autin capitol view">
     <h1 class="bannerTitle">Explore Austin in <br /> <em style="color:lightpink">Pink</em></h1>
+
+    <button class="contrast">Contrast</button>
 
     <div class="buttons">
         <span class="btn active" onclick="document.getElementById('text').style.fontSize= '1em' ">A</span>
@@ -238,20 +255,41 @@
     <hr>
     Did you like it? <br /> Austin thematic tours 👉
 
-    <button>Sign Up!</button>
+    <button class="signUp">Sign Up!</button>
 
 </div>
 </div>
+
 </center>
 
 </body>
 <script>
+function contrast(){
+    let body=document.querySelector ("body");
+    
+   // if (body.classList.contains ("dark")){
+     //   body.classList.remove ("dark");
+   // } else {
+    //    body.classList.add ("dark");
+    //}
+
+    //}
+    //body.classList.add("dark");
+body.classList.toggle ("dark");
+}
+
+let contrastButton= document.querySelector (".contrast");
+contrastButton.addEventListener("click", contrast);
+
+
+
+
     function signup(){
         let name = prompt ("What is your name?");
             let email = prompt ("What is your email?");
             alert ("Thank you! " + name + " Check your email for more thematic tours in Austin!");    
         }
-        let signupClick= document.querySelector ("button");
+        let signupClick= document.querySelector (".signUp");
         signupClick.addEventListener ("click", signup);
 
 
