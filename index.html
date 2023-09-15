@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e8c1aac706.js" crossorigin="anonymous"></script>
     <title>Barbie</title>
     <style>
         body{
@@ -100,12 +101,17 @@
         }
 
         .bannerTitle{
+            background:url(src/pexels-jeswin-thomas-15161974.jpg);
+            width:min-content;
             font-family: 'Sacramento', cursive;
             font-size:65px;
-            position:relative;   
-            top: -45%;
-            bottom: -50px;  
-            color:aliceblue;   
+            top:18px;
+            left:10px;
+            /*position:relative;   
+            /*top: -45%;
+            bottom: -50px;*/ 
+            color:aliceblue;
+               
         }
 
         p{
@@ -182,6 +188,7 @@
 <body class="dark">
 <center>
     <div class="mainContainer">
+        <div class="navbar">
     <nav>
         <ul>
         <li>
@@ -200,11 +207,14 @@
         </li>
     </ul>
     </nav>
+</div>
 
-    <img  class="banner" src="src/pexels-jeswin-thomas-15161974.jpg" alt="austin south congress street autin capitol view">
+    <!--<img  class="banner" src="src/pexels-jeswin-thomas-15161974.jpg" alt="austin south congress street autin capitol view">-->
+    <div class="bannerTitle">
     <h1 class="bannerTitle">Explore Austin in <br /> <em style="color:lightpink">Pink</em></h1>
+</div>
 
-    <button class="contrast">Contrast</button>
+    <button class="contrast"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></button>
 
     <div class="buttons">
         <span class="btn active" onclick="document.getElementById('text').style.fontSize= '1em' ">A</span>
